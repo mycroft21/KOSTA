@@ -1,0 +1,19 @@
+package CriteriaMale;
+
+public class computer {
+
+	
+class A{
+	void f1(){
+		X x;
+		if(...)x=new X1();
+		else
+			x = new X2();
+		
+		x.f1();
+		..toString().
+				
+	}
+}
+	
+}

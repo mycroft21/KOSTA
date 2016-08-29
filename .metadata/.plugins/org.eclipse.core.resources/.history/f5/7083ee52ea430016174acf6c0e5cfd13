@@ -1,0 +1,23 @@
+package day07_allay;
+
+public class MethodTest {
+
+	// 매개변수 없고 리턴값 없는 매소드
+	public static void show(){
+		
+		System.out.println("sunny");
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+show();
+	}
+
+}

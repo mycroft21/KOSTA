@@ -1,0 +1,29 @@
+package montecarlo;
+
+import java.util.Scanner;
+
+public class Pingpong {
+
+	public static void main(String[] args) {
+
+		int x=0, y=1,z=-1, n=1;
+		n = new Scanner(System.in).nextInt();
+
+
+		while(true){
+			x++;
+			y=y+z;
+			if(n%7==0)while(true){x++;z=z*-1; y=y+z;				if(x==n){break;}
+	}
+			if(n/7==0)while(true){x++;z=z*-1; y=y+z;				if(x==n){break;}
+	}
+			
+			
+			
+			if(x==n){break;}
+		}
+		System.out.println(y);
+		
+	}
+
+}

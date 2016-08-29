@@ -1,0 +1,10 @@
+package ex00.trier;
+
+public class CalMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

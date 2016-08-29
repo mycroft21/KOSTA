@@ -1,0 +1,73 @@
+package ex3.jdbc;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import oracle.jdbc.internal.OracleTypes;
+
+/*
+ CREATE OR REPLACE PROCEDURE SCOTT.usp_EmpList
+(
+	p_sal IN number,
+  p_cursor OUT SYS_REFCURSOR --APP ?Ç¨?ö©?ïòÍ∏? ?úÑ?ïú ???ûÖ
+)
+IS
+	BEGIN
+  			OPEN p_cursor
+        FOR
+        		 SELECT empno, ename, sal FROM EMP WHERE sal > p_sal;
+
+  END; 
+ */
+public class Ex07_Oracle_plsql {
+
+
+	public static void main(String[] args) {
+		Connection conn = null;
+		//Statement stmt = null;
+		CallableStatement cstmt = null; //pl-sql ?Ç¨?ö©******************
+		ResultSet rs = null;
+		
+		try{
+				//1. ?ìú?ùº?ù¥Î≤? ?ì±Î°?
+			   Class.forName("oracle.jdbc.OracleDriver"); //?ìú?ùº?ù¥Î≤? ?Å¥?ûò?ä§ ?ù¥Î¶? Î™ÖÏãú 
+			   System.out.println("Oracle ?ìú?ùº?ù¥Î≤? Î°úÎìú ?ôÑÎ£?");
+			   
+			   //2. ?ó∞Í≤∞ÏÉù?Ñ±(ConnectionString)
+			   conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","kingsmile","oracle");
+			   
+			   //3.Î™ÖÎ†π?Éù?Ñ± (CRUD)
+			   //pl-sql ?Ç¨?ö©?ãú =>prepareCall
+			   String sql = "{call usp_EmpList(?,?)}"; //******************
+			   cstmt = conn.prepareCall(sql); //****************
+			   cstmt.setInt(1, 2000);
+			   cstmt.registerOutParameter(2, OracleTypes.CURSOR);  //****************
+			   
+			   
+			   //4.Î™ÖÎ†π?ã§?ñâ(pl-sql?ã§?ñâ)
+			   cstmt.execute();
+			   System.out.println("?ã§?ñâ");
+			   //5.Î™ÖÎ†πÏ≤òÎ¶¨
+			   rs =  (ResultSet)cstmt.getObject(2); //************************
+			   
+			   while(rs.next()){
+				   System.out.printf("[%d][%s][%d]\n", 
+						                 rs.getInt(1) , rs.getString(2) , rs.getInt(3) );
+			     }
+			
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+			
+		}finally{
+			//6.?ûê?õê?ï¥?†ú
+			//DB?ó∞Í≤? Ï¢ÖÎ£å
+			if(rs != null){try{rs.close();}catch(Exception e){}}
+			if(cstmt != null){try{cstmt.close();}catch(Exception e){}}
+			if(conn != null){try{conn.close();}catch(Exception e){}}
+		}
+		
+	}
+
+}

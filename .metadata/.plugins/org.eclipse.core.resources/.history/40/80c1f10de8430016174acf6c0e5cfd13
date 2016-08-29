@@ -1,0 +1,33 @@
+package day07_allay;
+
+import java.util.Scanner;
+
+public class ex03_method {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("x= ");		int x = sc.nextInt();
+		System.out.print("y= ");		int y = sc.nextInt();
+		
+		System.out.println("main method = " +x +"," + y);
+				
+	}//endm
+	
+	//매개변수가 없고, 리턴타입 없는 경우
+	public static void plus(){
+		int hap = 100 + 30;
+		System.out.println("plus method hap = " + hap);
+		
+	}
+	
+	//매개변수가 없고, 리턴타임 있는 경우
+	
+	//매개 변수가 있고 리턴타입 없는 경우
+	
+	//매개 변수가 있고, 리턴타입도 있는 경우
+	
+	
+
+}//endc

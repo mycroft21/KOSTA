@@ -1,0 +1,17 @@
+package day07_allay;
+
+public class Ex01_break {
+
+	public static void main(String[] args) {
+		
+	
+	
+	for(int i = 1; 1 <=10; i++){
+		if(i==5)break;
+		if(i==3)continue;
+		System.out.println(i);
+	}
+	
+	
+}}
+                 

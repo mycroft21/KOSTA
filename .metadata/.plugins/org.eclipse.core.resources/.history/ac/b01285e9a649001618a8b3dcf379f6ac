@@ -1,0 +1,13 @@
+package Ex04;
+
+import java.util.Scanner;
+
+public class Name extends Sub {
+
+	public Name() {
+
+		super.name =super.temp;
+		
+	}
+
+}

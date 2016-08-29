@@ -1,0 +1,18 @@
+package Ex05_oop;
+
+public class ClassTV {
+
+	class color{
+		String s, b, w, g, r;
+		
+	}
+	
+	
+	class Channel{
+		
+		String jtbc, ebs, kbs, A, sbs, mbc;
+		
+	}
+	
+	
+}

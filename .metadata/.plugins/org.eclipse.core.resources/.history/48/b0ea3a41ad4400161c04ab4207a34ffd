@@ -1,0 +1,34 @@
+package ex01.instance;
+
+class InstanceMethod {
+	public static void main(String[] args) {
+		System.out.println("main");
+		
+			MethodClass2 see = new MethodClass2();
+			
+			see.show();
+	}
+}
+
+	class MethodClass1{
+		public static void main(String[] args) {
+			
+			
+			
+		
+		}
+	}
+	
+	class MethodClass2{
+		
+		public void show(){
+			System.out.println("shwo");
+			System.out.println("인스턴트 메소드.");
+		}
+		
+		
+		
+		
+	}
+
+

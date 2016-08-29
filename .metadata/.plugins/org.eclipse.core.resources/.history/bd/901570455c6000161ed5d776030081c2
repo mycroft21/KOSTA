@@ -1,0 +1,15 @@
+package prob5;
+
+import java.io.File;
+
+public class Prob5 {
+	public static void main(String[] args) {
+		String fileName = "\\kosta-thp\th125\th125_Java\프로그램 실기 자료_가져가세요 ^^\이공계-FinalTerm\prob5";
+		makeVariable(fileName);
+	}
+
+	private static void makeVariable(String fileName) {
+		File f = new File(fileName);
+
+	}
+}

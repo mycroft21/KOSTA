@@ -1,0 +1,21 @@
+package ex01.contral.For;
+
+import java.util.Scanner;
+
+public class MainTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int b = 0;
+		
+		for(int a = 0; a < 5; a++){
+		
+		System.out.print("int data input");
+		
+		int sc = new Scanner(System.in).nextInt();
+		
+		b = b + sc;
+		}
+	}
+
+}

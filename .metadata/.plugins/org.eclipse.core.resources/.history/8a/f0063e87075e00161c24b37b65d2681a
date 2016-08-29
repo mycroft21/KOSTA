@@ -1,0 +1,28 @@
+package pibo;
+
+import java.util.ArrayList;
+
+public class Pibonaji {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int a = 1, b = 1;
+		ArrayList<Integer> al = new ArrayList<>();
+
+		for (int i = 0; i < 100; i++) {
+
+			
+			
+			b += a;
+			a = b-a;
+			
+			if (i % 10 == 0) {
+				System.out.println(b);
+			}
+		}
+		System.out.println(b);
+
+	}
+
+}

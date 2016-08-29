@@ -1,0 +1,24 @@
+package random;
+
+import java.util.Random;
+
+public class Ex01_random {
+	public static void main(String[] args) {
+		Random r = new Random();
+		int[] iNum = { 0, 0, 0, 0, 0, 0 };
+
+		for (int i = 0; i < 6; i++) {
+
+			for (int j = 1; j < 6; j++) {
+				if(i!=j) {
+					do {
+				iNum[i] = (int)(r.nextInt(6) + 1);}
+				 while (iNum[i] == iNum[j]);}
+			}
+		}
+		for (int item : iNum) {
+			System.out.println(item);
+		}
+
+	}
+}

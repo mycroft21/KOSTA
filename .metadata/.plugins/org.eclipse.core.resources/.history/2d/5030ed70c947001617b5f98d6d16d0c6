@@ -1,0 +1,9 @@
+package random;
+
+public class MathRandom {
+public static void main(String[] args) {
+	
+	System.out.println((int)(Math.random()*5));
+	System.out.println(Math.random());
+}
+}

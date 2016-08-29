@@ -1,0 +1,11 @@
+package snippet;
+
+public class Snippet {
+	
+	ArrayList<CalDTO> list = cao.select();
+	
+	for(CalDTO dto:list){
+		System.out.println(dto.toString());
+	}
+}
+

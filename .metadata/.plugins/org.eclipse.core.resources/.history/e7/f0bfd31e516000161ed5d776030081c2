@@ -1,0 +1,70 @@
+package test2;
+
+public class Employee {
+
+	String name;
+	int id;
+	int basicpay;
+	int com;
+	int totalpay;
+	int managerCom;
+	
+	public Employee(int id, String name, int basicPay, int com) {
+		
+		this.id = id;
+		this.name = name;
+		this.basicpay = basicPay;
+		this.com = com;
+		
+	}
+	
+		
+	public Employee(int id, String name, int basicPay, int com, int managerCom) {
+		this.id = id;
+		this.name = name;
+		this.basicpay = basicPay;
+		this.com = com;
+		this.managerCom= managerCom;
+		}
+
+
+	void calcpay(){
+		totalpay = basicpay + com;
+	}
+	
+	@Override
+	public String toString() {
+		return "사번 "+ id+"인 "+ name+" 은  "+ totalpay+"의 총급여를 받습니다.";
+	}
+
+}
+
+
+class Manager extends Employee{
+
+	int managerCom;
+	
+	public Manager(int id, String name, int basicPay, int com) {
+		super(id, name, basicPay, com);
+		// TODO Auto-generated constructor stub
+	}
+	public Manager(int id, String name, int basicPay, int com, int managerCom) {
+		super(id, name, basicPay, com, managerCom);
+		// TODO Auto-generated constructor stub
+			
+	}
+	@Override
+	void calcpay() {
+		// TODO Auto-generated method stub
+		super.calcpay();
+		super.totalpay= super.basicpay+super.com+super.managerCom;
+	}
+	
+
+	
+	
+	
+	
+}
+
+

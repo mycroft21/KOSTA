@@ -1,0 +1,13 @@
+package Ex04;
+
+import java.util.Scanner;
+
+public class Major extends Name {
+	String major;
+
+	public void major() {
+		System.out.println("Àü°ø");
+		major = super.temp();
+
+	}
+}

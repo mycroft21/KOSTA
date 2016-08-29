@@ -1,0 +1,17 @@
+package Ex04;
+
+import java.util.Scanner;
+
+public class School extends Sub {
+
+	String school;
+	
+	public void school() {
+		System.out.println("ÇÐ±³");
+		school =super.temp();
+			
+		}
+
+	
+
+}

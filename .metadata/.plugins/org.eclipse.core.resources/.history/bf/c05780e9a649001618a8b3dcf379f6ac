@@ -1,0 +1,13 @@
+package Ex04;
+
+import java.util.Scanner;
+
+public class Major extends Sub{
+
+	public Major() {
+		
+		System.out.println("Àü°ø : ");
+		super.major = new Scanner(System.in).next();
+		
+	}
+}

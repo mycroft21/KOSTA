@@ -1,0 +1,14 @@
+package Ex04;
+
+import java.util.Scanner;
+
+public class School extends Sub {
+
+	public void school() {
+		// TODO Auto-generated method stub
+		super.school = new Scanner(System.in).next();
+		
+		
+	}
+
+}

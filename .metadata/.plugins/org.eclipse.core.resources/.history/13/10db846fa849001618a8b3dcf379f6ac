@@ -1,0 +1,14 @@
+package Ex04;
+
+import java.util.Scanner;
+
+public class Name extends School {
+
+	String name;
+	public Name() {
+
+		name =super.temp();
+		
+	}
+
+}

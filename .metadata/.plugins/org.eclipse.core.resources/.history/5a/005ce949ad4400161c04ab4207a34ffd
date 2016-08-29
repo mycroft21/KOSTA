@@ -1,0 +1,15 @@
+package ex02.method;
+
+public class MainEntry {
+
+	
+	public static int add(int x, int y){
+		return x + y;
+	}
+	
+	
+	public static void main(String[] args) {
+		int su = add(3, 5);
+		System.out.println(su  + add(6,3));
+	}
+}

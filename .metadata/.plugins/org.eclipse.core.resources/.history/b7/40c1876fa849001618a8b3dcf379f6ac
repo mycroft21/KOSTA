@@ -1,0 +1,16 @@
+package Ex04;
+
+import java.util.Scanner;
+
+public class Grade extends Major {
+	String grade;
+
+	public Grade() {
+
+		grade = super.temp();
+	}
+
+	public void show() {
+		System.out.println(super.school + "\t" + super.name + "\t" + super.major + "\t" + grade);
+	}
+}

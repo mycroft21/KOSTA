@@ -1,0 +1,16 @@
+package day07_allay;
+
+public class Ex05_method {
+
+	public static void plus(int x, int y){
+		System.out.println("두함수의 합은 " + x + " + " + y + " = " + (x+y));
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		plus(4,6);
+	}
+
+}

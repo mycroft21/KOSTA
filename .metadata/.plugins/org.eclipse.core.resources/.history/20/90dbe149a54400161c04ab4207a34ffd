@@ -1,0 +1,22 @@
+package day08_array;
+
+
+public class MainM {
+	
+	
+	
+	public static void me(){
+		System.out.println("³ªµµ?");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+			
+		
+		MainM.me();
+		Ex01 se = new Ex01();
+		se.show();
+	}
+
+}

@@ -1,0 +1,37 @@
+package day08_array;
+
+import java.util.Random;
+import java.util.Scanner;
+
+//특정달의 평균 강수량
+public class Work01_Array {
+
+	public static void main(String[] args) {
+		
+		double[] rain = new double[30];
+		
+		Scanner sc = new Scanner(System.in);
+		Random random = new Random();
+		
+		for(int i = 0; i<rain.length ; i++){
+			rain[i]= random.nextDouble();
+			if(rain[i] <0) rain[i] =0;
+		
+		}
+		
+		double sum = 0, ave = 0;
+		
+		for(double i: rain){
+			sum +=i;
+			}
+		ave = (sum/rain.length)*100;
+		
+		System.out.printf("평균 강수량은 %.2f"+ "%입니다." , ave);
+		
+		
+		
+		
+		
+	}//end m
+	
+	}//end c

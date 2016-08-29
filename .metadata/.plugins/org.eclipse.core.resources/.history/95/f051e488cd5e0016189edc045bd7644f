@@ -1,0 +1,76 @@
+package ex3.jdbc;
+/*
+ * Java ?—?„œ MySql ?—°?™?•˜ê¸?
+ * 1.  mysql ?‚¬?´?Š¸?—?„œ JDBC ?“œ?¼?´ë²? ?‹¤?š´ ë°›ê¸°
+ * 2. mysql-connector-java-5.1.26-bin.jar ?ŒŒ?¼ ???¥ê²½ë¡œ ?™•?¸
+ * 3. lib ì¶”ê?ë¥? ?†µ?•´ ì°¸ì¡° ?„¤? •
+ * 4. MySQL - com.mysql.jdbc.Driver
+      ?˜¤?¼?´ - oracle.jdbc.driver.OracleDriver
+                 oracle.jdbc.OracleDriver
+      MS SQL ?„œë²? - com.microsoft.sqlserver.jdbc.SQLServerDriver
+   5. MySQL? ‘?† ? •ë³? : DBëª?(sampledb) port:3306  ê³„ì •(SampleUser) ë¹„ë²ˆ(1004)
+   6. Java API : java.sql.* ?•˜?œ„ ??›?“¤ ?‚¬?š©
+   
+   ê¸°í?
+   ì£¼ìš” DBMS?˜ JDBC URL êµ¬ì„±
+	MySQL : jdbc:mysql://HOST[:PORT]/DBNAME[?param=value&param1=value2&...]
+	Oracle: jdbc:oracle:thin:@HOST:PORT:SID
+	MS SQL : jdbc:sqlserver://HOST[:PORT];databaseName=DB
+
+   
+ */
+	//JDBC ë¬´ì¡°ê±? ?”°?¼?•˜ê¸?
+	//1. ?—°ê²°í•˜ê³ ì ?•˜?Š” ?°?´?„°ë² ì´?Š¤ ?“œ?¼?´ë²? ë¡œë”©
+	//2. ?“œ?¼?´ë²? ë¡œë”©
+	//3. ?—°ê²°ìƒ?„± (?–´?–¤ DB?—?„œ , ?–´?–¤ port  , ?–´?–¤ ?‚¬?š©? , ?–´?–¤ ë¹„ë²ˆ ? ‘?† (Connection String)
+	//4. ëª…ë ¹?ƒ?„± (CRUD) 
+	//5. ëª…ë ¹?‹¤?–‰ (execute ....  select (resultset) , insert , update , delete ...
+	//6. ëª…ë ¹ì²˜ë¦¬ (ì¡°íšŒ , ì¶œë ¥ ,,,,,)
+	//7. ??›?•´? œ (?—°ê²? ì¢…ë£Œ)
+
+import java.sql.DriverManager; //?“œ?¼?´ë²?
+import java.sql.Connection;  //?—°ê²?
+import java.sql.Statement;   //ëª…ë ¹
+import java.sql.ResultSet;     //ê²°ê³¼ì²˜ë¦¬
+
+public class Ex01_OracleConnect {
+	public static void main(String[] args) {
+		Connection conn = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+		
+		try{
+				//1. ?“œ?¼?´ë²? ?“±ë¡?
+			   Class.forName("oracle.jdbc.OracleDriver"); //?“œ?¼?´ë²? ?´?˜?Š¤ ?´ë¦? ëª…ì‹œ 
+			   System.out.println("Oracle ?“œ?¼?´ë²? ë¡œë“œ ?™„ë£?");
+			   
+			   //2. ?—°ê²°ìƒ?„±(ConnectionString)
+			   conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","kingsmile","oracle");
+			   
+			   //3.ëª…ë ¹?ƒ?„± (CRUD)
+			   stmt = conn.createStatement();
+			   String sql = "select empno, ename , job  from emp";
+			   
+			   //4.ëª…ë ¹?‹¤?–‰(mysql ?—ê²? ëª…ë ¹ êµ¬ë¬¸ ?‹¤?–‰)
+			    rs = stmt.executeQuery(sql);
+			   
+			   //5.ëª…ë ¹ì²˜ë¦¬
+			   while(rs.next()){
+				   System.out.printf("[%d][%s][%s]\n", 
+						                 rs.getInt("empno") , rs.getString("ename") , rs.getString("job") );
+			   }
+			
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+			
+		}finally{
+			//6.??›?•´? œ
+			//DB?—°ê²? ì¢…ë£Œ
+			if(rs != null){try{rs.close();}catch(Exception e){}}
+			if(stmt != null){try{stmt.close();}catch(Exception e){}}
+			if(conn != null){try{conn.close();}catch(Exception e){}}
+		}
+		
+	}
+
+}

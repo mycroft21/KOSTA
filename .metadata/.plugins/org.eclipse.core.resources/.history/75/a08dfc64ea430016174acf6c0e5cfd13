@@ -1,0 +1,30 @@
+package day07_allay;
+
+public class MethodTest {
+
+	// 매개변수 없고 리턴값 없는 매소드
+	public static void show() {
+
+		System.out.println("sunny");
+
+	}
+	
+	//매개변수 없고 리턴값 있는 매소드
+	public static void display(String name, int i){
+		System.out.println(name + "이군요");
+		System.out.println(i);
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("main start");
+
+		show();
+		display("이상선",10);
+
+		System.out.println("main end");
+
+	}
+
+}

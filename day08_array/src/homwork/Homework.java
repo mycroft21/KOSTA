@@ -1,0 +1,60 @@
+package homwork;
+
+public class Homework {
+
+	public static void main(String[] args) {
+
+		hap();
+
+		div();
+
+		plus();
+
+	}// main
+
+	public static void hap() {
+		int[] a = new int[5];
+		int sum = 0;
+		for( int i = 0; i< a.length; i++){
+			a[i] = i+1;
+		}
+		
+		for (int i=0; i <a.length; i++) {
+			for(int x = i; x < a.length; x++){
+			sum = sum + a[4-x]; }
+		}
+		
+		System.out.println("문제 1의 답은 " + sum);
+	}// hapend
+
+	public static void div() {
+		double[] a = new double[10];
+		double sum = 0;
+		
+		for (int i = 0; i < a.length; i++) {
+			a[i] = i+1;
+		}
+		for (int i = 0; i < a.length; i++) {
+			sum = sum + (double)(a[i] / (a[i]+1));
+		}
+
+		System.out.printf("문제 2의 답은 %.2f \n" , sum);
+	}// end div
+
+	public static void plus() {
+		int[] a = new int[100];
+		int sum = 0;
+		for (int i = 0; i < a.length; i++) {
+			a[i] = i+1;
+		}
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] % 2 == 0) {
+				sum += a[i];
+			} else {
+				sum -= a[i];
+			}
+		}
+		System.out.println("문제 3의 답은 " + sum);
+	}// end plus
+
+}// end c

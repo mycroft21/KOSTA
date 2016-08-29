@@ -1,0 +1,73 @@
+package day07_allay;
+
+import java.util.Scanner;
+
+public class Ex08_method {
+	public static int input() {
+		Scanner sc = new Scanner(System.in);
+
+		int a = sc.nextInt();
+		return a;
+	}
+
+	public static String inputc() {
+		Scanner sc = new Scanner(System.in);
+
+		String a = sc.next();
+
+		return a;
+	}
+
+	public static int process(int a, int b) {
+		char op = inputc().charAt(0);
+
+		int type = 0;
+
+		try {
+			switch (op) {
+
+			case '+':
+				type = a + b;
+				break;
+			case '-':
+				type = a - b;
+				break;
+			case '*':
+				type = a * b;
+				break;
+			case '/':
+				type = a / b;
+				break;
+			}
+		} catch (Exception e) {
+			System.out.println("0으로는 나눌 수 없습니다.");
+		}
+
+		return type;
+	}
+
+	public static void output(int a) {
+
+		System.out.println("정답은 " + a);
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("첫번째 숫자를 입력해 주세요!");
+
+		int a = input();
+
+		System.out.println("두번째 숫자를 입력해 주세요!");
+
+		int b = input();
+
+		System.out.println("연산자를 입력해 주세요!");
+
+		int anccer = process(a, b);
+
+		output(anccer);
+	}
+
+}

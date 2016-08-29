@@ -1,0 +1,27 @@
+package Ex04;
+
+import java.util.Scanner;
+
+public class School extends Sub {
+
+	String school, name, major, grade;
+
+	public School() {
+		
+		System.out.println("학교");
+		school = super.temp();
+		System.out.println("이름");
+		name = super.temp();
+		System.out.println("전공");
+		major = super.temp();
+		System.out.println("학년");
+		grade = super.temp();
+
+	}
+
+	public void show() {
+		System.out.println("학교\t이름\t전공\t학년");
+		System.out.println(school + "\t" + name + "\t" + major + "\t" + grade);
+	}
+
+}

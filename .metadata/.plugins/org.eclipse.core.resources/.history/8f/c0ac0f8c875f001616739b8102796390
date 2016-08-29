@@ -1,0 +1,20 @@
+package ex00.trier;
+
+import java.util.Scanner;
+
+public class CalMain {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		int num = 
+		System.out.println("작업을 선택합니다.\n");
+		System.out.println("1.select\n2.insult\n3.delete\n4.update\n5.rollback\n6.exit");
+		
+		
+		
+		
+		
+	}
+
+}

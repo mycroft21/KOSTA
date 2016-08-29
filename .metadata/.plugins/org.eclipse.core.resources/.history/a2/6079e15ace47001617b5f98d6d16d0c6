@@ -1,0 +1,19 @@
+package random;
+
+import java.util.Random;
+
+public class Ex01_random {
+	public static void main(String[] args) {
+		Random r = new Random();
+		int[] iNum = new int[6];
+		
+		System.out.println(iNum);
+	
+	for(int i = 1; i < 7; i++){
+		
+		do{iNum[i] = r.nextInt(44)+1;
+		}while(iNum[i]==iNum[i-1]);
+		}
+	for(int item : iNum){System.out.println(item);}
+
+}}

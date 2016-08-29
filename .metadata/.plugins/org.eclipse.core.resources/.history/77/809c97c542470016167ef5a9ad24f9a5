@@ -1,0 +1,17 @@
+package dat09_Array;
+
+public class Ex05_sort2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[][][] grade = new int[7][2][3];
+		
+		
+		
+		
+		
+		
+	}
+
+}

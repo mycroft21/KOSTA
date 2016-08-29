@@ -1,0 +1,23 @@
+package Ex04;
+
+public class MainEntry {
+
+ public static void main(String[] args) {
+	
+	 Sub sub = new Sub();
+	 
+	 School sc = new School();
+	 
+	 
+	 
+	 
+	 
+	 sub.sub();
+	 sub.show();
+	 
+	 
+	 
+	 
+}
+	
+}

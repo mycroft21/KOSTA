@@ -1,0 +1,14 @@
+package Ex04;
+
+import java.util.Scanner;
+
+public class Grade extends Sub{
+
+	public Grade() {
+		
+		System.out.println("ÇÐ³â : ");
+		super.grade = new Scanner(System.in).next();
+		
+	}
+	
+}

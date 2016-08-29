@@ -1,0 +1,65 @@
+package Ex05_oop;
+
+import java.util.Scanner;
+
+import Ex05_oop.ClassTV.Channel;
+import Ex05_oop.ClassTV.color;
+
+public class MainTv {
+
+	public static void main(String[] args) {
+	
+		Scanner sc = new Scanner(System.in);
+		ClassTV tv = new ClassTV();
+		color co = tv.new color();
+		Channel cha = tv.new Channel("썰전","아롱이 다롱이","9시 뉴스데스크","지금만나러갑니다.","다큐 3일","나안봐");
+		String Color = "0";
+		
+		do{
+		
+		System.out.println("주문 하실 TV의 색상 표에서 선택해 주세요!");
+		System.out.println("=============================");
+		System.out.println(" 1. 모던 실버 \n 2. 사파이어 블루 \n 3. 시크릿 화이트  \n 4. 로즈 골드 \n 5. 물랑 레드");
+		System.out.println("=============================");
+		
+		
+		
+		
+		
+		Color = sc.next();
+		
+		switch(Color){
+			case "1": Color = co.s; break;
+			case "2": Color = co.b; break;
+			case "3": Color = co.w; break;
+			case "4": Color = co.g; break;
+			case "5": Color = co.r; break;
+			default : Color = "0"; System.out.println("잘못 선택 하셨습니다."); break;
+					
+		}}while(Color=="0");
+		
+	co.setTV(Color);
+	
+	System.out.println("손님이 선택 하신 TV의 색은 " + co.TV + "입니다. TV 작동을 시작합니다.");
+		
+	int ch =0;
+		do{
+			System.out.println("채널을 선택해 주세요!");
+				
+			
+			ch = sc.nextInt();
+			
+			switch(ch){
+				case 1:  System.out.println(cha.jtbc); break;
+				case 2:  System.out.println(cha.ebs); break;
+				case 3:  System.out.println(cha.kbs); break;
+				case 4:  System.out.println(cha.A); break;
+				case 5:  System.out.println(cha.sbs); break;
+				case 6: System.out.println(cha.mbc); break;
+				default : Color = "0"; System.out.println("tv를 종료합니다.."); break;
+						
+			}}while(Color!="0");
+		
+		
+	}
+	}

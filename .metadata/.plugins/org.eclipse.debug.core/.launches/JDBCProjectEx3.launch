@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/day31_mvc/src/ex01/mvc/JDBCProjectEx3.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="ex01.mvc.JDBCProjectEx3"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="day31_mvc"/>
+</launchConfiguration>

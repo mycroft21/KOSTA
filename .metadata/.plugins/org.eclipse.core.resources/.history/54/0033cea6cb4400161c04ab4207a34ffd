@@ -1,0 +1,14 @@
+package day08_array;
+
+public class Ex04_Array {
+	public static void main(String[] args) {
+		int[] arr = {7,3,4,9,7,10,12,2,7};
+		int sum = 0;
+		for(int item : arr){
+			sum = sum + item;
+			System.out.println(arr[sum]);
+		}
+		System.out.println("arrÀÇ ÇÕÀº : " +sum);
+	}
+
+}

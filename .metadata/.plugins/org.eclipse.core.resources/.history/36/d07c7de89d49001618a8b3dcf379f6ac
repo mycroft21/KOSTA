@@ -1,0 +1,39 @@
+package Ex04;
+
+import java.util.Scanner;
+
+public class Pivo {
+
+	int max = 0, temp = 1;
+	int i =0;
+	public void pivo(int i) {
+
+		
+
+		for (int j = 0; j < i; j++) {
+			max += temp;
+			temp = max;
+System.out.println(max);
+		}
+		this.i =i;
+		this.max=max;
+		
+	}
+
+	public void show() {
+		System.out.println(i + "번째 수열은 " + max + "입니다.");
+
+	}
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		Pivo pi = new Pivo();
+
+		System.out.println("몇번재 피보나치 수열을 출력 할까요?");
+
+		pi.pivo(sc.nextInt());
+		pi.show();
+	}
+
+}

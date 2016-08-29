@@ -1,0 +1,5 @@
+package DBConn.Util;
+
+public class ConnectionSingletonHelper {
+
+}

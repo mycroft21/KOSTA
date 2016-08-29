@@ -1,0 +1,32 @@
+package ex00.trier;
+
+public class CalDAO {
+
+	String week;
+	String day;
+	String num_day;
+	
+	public String getWeek() {
+		return week;
+	}
+	public void setWeek(String week) {
+		this.week = week;
+	}
+	public String getDay() {
+		return day;
+	}
+	public void setDay(String day) {
+		this.day = day;
+	}
+	public String getNum_day() {
+		return num_day;
+	}
+	public void setNum_day(String num_day) {
+		this.num_day = num_day;
+	}
+	@Override
+	public String toString() {
+		return "CalDAO [ week= " + week + "\t day= " + day + "\t num_day= " + num_day + " ]";
+	}
+	
+}

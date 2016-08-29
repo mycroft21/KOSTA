@@ -1,0 +1,5 @@
+package ex01.jdbc.employee;
+
+public class MyModel {
+
+}

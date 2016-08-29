@@ -1,0 +1,46 @@
+package Ex04;
+
+import java.util.Scanner;
+
+public class Sub {
+
+	String school, name, major, grade;
+	String temp;
+
+	public void sub() {
+		
+   System.out.println("학교\t이름\t전공\t학년");
+		
+
+	
+
+	}
+
+	public void setSchool(String school) {
+		this.school = school;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setMajor(String major) {
+		this.major = major;
+	}
+
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+
+	public String temp() {
+		Scanner sc = new Scanner(System.in);
+		this.temp =sc.next();
+		return temp;
+	}
+
+	public void show() {
+		
+		System.out.println(school + "\t" + name + "\t" + major + "\t" + grade);
+	}
+
+}

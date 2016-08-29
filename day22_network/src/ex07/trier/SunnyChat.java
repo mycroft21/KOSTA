@@ -1,0 +1,21 @@
+package ex07.trier;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+public class SunnyChat {
+
+	public static void main(String[] args) throws Exception {
+
+		int port = 8000;
+		ServerSocket ss = new ServerSocket(port);
+		System.out.println("채팅을 받아욧!!!");
+		
+		while(true){
+		
+		}
+		
+
+	}
+
+}

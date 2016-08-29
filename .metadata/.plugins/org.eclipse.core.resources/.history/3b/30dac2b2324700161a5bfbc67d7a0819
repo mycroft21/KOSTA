@@ -1,0 +1,74 @@
+package dat09_Array;
+
+import java.util.Scanner;
+
+public class Ex04_sort {
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("이름을 입력해 주세요!");
+		String name = sc.next();
+		int[] suk = new int[7];
+		for (int i =0; i< suk.length; i++){
+		suk[i] = ent(name);
+		}
+		
+		
+	}
+
+	public static int ent(String name) {
+
+		int kor = 0, exe = 0, com = 0;
+		Scanner sc = new Scanner(System.in);
+
+		do {
+			System.out.println("국어 성적을 입력해 주세요");
+			kor = sc.nextInt();
+		} while (kor >= 100 && kor <= 0);
+
+		do {
+			System.out.println("체육 성적을 입력해 주세요");
+			exe = sc.nextInt();
+		} while (exe >= 100 && exe <= 0);
+
+		do {
+			System.out.println("전산 성적을 입력해 주세요");
+			com = sc.nextInt();
+		} while (com >= 100 && com <= 0);
+		
+		return add(kor,exe,com);
+	}
+
+	public static int add(int kor, int exe, int com) {
+		int sum = kor + exe + com;
+		int avg = sum / 3;
+		char hap = 0;
+
+		switch (avg / 10) {
+		case 10:
+		case 9:
+			hap = 'A';
+			break;
+		case 8:
+		case 7:
+			hap = 'B';
+			break;
+		case 6:
+		case 5:
+			hap = 'C';
+			break;
+		case 4:
+			hap = 'D';
+			break;
+		default:
+			hap = 'F';
+		}//학점
+		return avg;
+	
+	}
+	
+	public static void pirnt(){
+		
+	}
+
+}

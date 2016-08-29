@@ -1,0 +1,15 @@
+package Ex04;
+
+import java.util.Scanner;
+
+public class School extends Sub {
+
+	String school;
+	
+	public School() {
+		
+		school =super.temp();
+			
+		}
+
+}

@@ -1,0 +1,17 @@
+package Ex04;
+
+public class Student {
+
+	int time;
+	String student;
+	
+	public Student(int time, String student) {
+		
+		this.time = time;
+		this.student = student;
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,5 @@
+package DBClose.Utill;
+
+public class ConnetionCloseHelper {
+
+}

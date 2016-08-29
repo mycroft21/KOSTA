@@ -1,0 +1,13 @@
+package random;
+
+import java.util.Random;
+
+public class Ex01_random {
+	public static void main(String[] args) {
+		Random r = new Random();
+		int iNum = r.nextInt();
+		
+		System.out.println(iNum);
+	}
+
+}

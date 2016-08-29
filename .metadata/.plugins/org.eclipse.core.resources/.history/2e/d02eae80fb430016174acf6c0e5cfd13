@@ -1,0 +1,56 @@
+package day07_allay;
+
+import java.util.Scanner;
+
+public class MethodTest {
+
+	// 매개변수 없고 리턴값 없는 매소드
+	public static void show() {
+
+		System.out.println("sunny");
+
+	}
+	
+	//매개변수 없고 리턴값 있는 매소드
+	public static void display(String name, int i){
+		System.out.println(name + "이군요");
+		System.out.println(i);
+	}
+	
+	public static void mymy(String name, int age, String home){
+		System.out.println("이름 : " +name);
+		System.out.println("나이 : " + age);
+		/*home = new Scanner(System.in).next();*/
+		System.out.println("주소 : " + home);
+	}
+	
+	public static void add(int a, int b){
+		System.out.println("합은 "+(a + b));
+	}
+	
+	//매개변수는 없지만 리턴은 있는 경우
+	public static int dis(){
+		int i = 3;
+		int y = 5;
+		
+		return i*y;
+	}
+	
+
+	public static void max(int a, int b){
+		if (a>b){System.out.println("큰수는 a이고 값은" + a);
+		} else if (a == b){System.out.println("두수의 값이 같습니다.");
+	} else { System.out.println("큰수는 b이고 값은 " + b); }}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("main start");
+
+		int x = dis();
+		System.out.println(x +" "+( dis()));
+
+		System.out.println("main end");
+
+	}
+
+}

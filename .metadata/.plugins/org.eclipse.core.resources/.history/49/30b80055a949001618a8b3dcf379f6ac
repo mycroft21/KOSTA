@@ -1,0 +1,26 @@
+package Ex04;
+
+import java.util.Scanner;
+
+public class Sub {
+
+	
+	String temp;
+
+	public void sub() {
+	
+	}
+
+
+	public String temp() {
+		Scanner sc = new Scanner(System.in);
+		this.temp =sc.next();
+		return temp;
+	}
+
+	public void show() {
+		
+		
+	}
+
+}
